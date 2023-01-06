@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="16.187">
+    <testcase classname="Dashboard Module" name="TC04  User should be able navigate edit event when click the edit event button" time="15.606">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+And User creates an event...................................................passed
+And User clicks Edit Button.................................................passed
+Then User verifies the url including "edit-event"...........................passed
+When User closes driver.....................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
