@@ -1,7 +1,7 @@
 @EventModule
 Feature: Event Module
 
-  @ETC01
+  @ETC01 @Positive
   Scenario: TC01 User should view create event form if click the Create Event
   button on dashboard
     Given User does Happy Path Login
@@ -9,7 +9,7 @@ Feature: Event Module
     Then  User verifies they see the Event Form
     And User closes driver
 
-  @ETC02
+  @ETC02 @Negative
   Scenario: TC02 User should view validation errors if click the Create Event button
   without fill the event form
     Given User does Happy Path Login
@@ -18,7 +18,7 @@ Feature: Event Module
     Then  User verifies error messages
     And   User closes driver
 
-  @ETC03
+  @ETC03 @Positive
   Scenario: TC03 User should be able to add new participant when click the Add
   Participant button
     Given User does Happy Path Login
@@ -28,7 +28,7 @@ Feature: Event Module
     And   User closes driver
 
 
-  @ETC04
+  @ETC04 @Negative
   Scenario: TC04 User should view error message if removes all participants
     Given User does Happy Path Login
     And  User clicks Create Event Buttom
@@ -36,7 +36,7 @@ Feature: Event Module
     Then User verifies they see the Please Add Participant text
     And   User closes driver
 
-  @ETC05
+  @ETC05 @Positive
   Scenario: TC05 User should be able to create new event if fills all required fields
   and redirect to dashboard page with create successful message
     Given User does Happy Path Login
@@ -46,7 +46,7 @@ Feature: Event Module
     Then Use verifies they see successfull message
     And   User closes driver
 
-  @ETC06
+  @ETC06 @Positive
   Scenario: TC06 User should be able to edit event. When user click the edit
   button all event fields must be filled according to editing event
     Given User does Happy Path Login
@@ -58,7 +58,7 @@ Feature: Event Module
     Then User verifies all form fields are updated
     And   User closes driver
 
-  @ETC07
+  @ETC07 @Positive
   Scenario: TC07 User should be able to update event if required fields filled and
   redirect to dashboard page with update successful message
     Given User does Happy Path Login
