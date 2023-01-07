@@ -1,7 +1,7 @@
-@Loginmodule
+@Loginmodule @E2E
 Feature: Login Module
 
-  @LTC01
+  @LTC01 @Positive
   Scenario: TC01 User should see login form if not authenticated.
   Login Form should contain username password and login button
     Given User goes to "URL"
@@ -11,7 +11,7 @@ Feature: Login Module
     And   User verifies they see the Login Button
     And   User closes driver
 
-  @LTC02
+  @LTC02 @Negative
   Scenario: TC02 – User should see validation errors if click the login button without
   fill the login form
     Given User goes to "URL"
@@ -20,7 +20,7 @@ Feature: Login Module
     Then  User verifies they see the Validation Error Messages
     And   User closes driver
 
-  @LTC03
+  @LTC03 @Positive
   Scenario: TC03 User should navigate to the dashboard and see welcome
   message if authenticate successfully
     Given User goes to "URL"
