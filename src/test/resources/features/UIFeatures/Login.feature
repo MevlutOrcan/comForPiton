@@ -1,4 +1,4 @@
-@Loginmodule
+@Loginmodule @E2E
 Feature: Login Module
 
   @LTC01 @Positive

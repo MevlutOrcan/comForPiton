@@ -1,4 +1,4 @@
-@DashBoardModule
+@DashBoardModule @E2E
 Feature: Dashboard Module
 
   @DTC01 @Positive

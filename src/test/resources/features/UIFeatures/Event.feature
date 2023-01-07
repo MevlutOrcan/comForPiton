@@ -1,4 +1,4 @@
-@EventModule
+@EventModule @E2E
 Feature: Event Module
 
   @ETC01 @Positive
