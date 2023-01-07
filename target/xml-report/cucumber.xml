@@ -1,12 +1,170 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="16.187">
-    <testcase classname="Dashboard Module" name="TC04  User should be able navigate edit event when click the edit event button" time="15.606">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="16" time="104.429">
+    <testcase classname="Dashboard Module" name="TC01 User should view dashboard if authenticated" time="9.144">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+And User goes to "https://e2e-assessment.piton.com.tr/dashboard" directly...passed
+Then User verifies the url including "dashboard"............................passed
+When User closes driver.....................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Dashboard Module" name="TC02 User should redirect to login page if not authenticated" time="3.819">
+        <system-out>
+            <![CDATA[Given User goes to "https://e2e-assessment.piton.com.tr/dashboard" directly.passed
+Then User verifies they see the Event Manager Login Text....................passed
+When User closes driver.....................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Dashboard Module" name="TC03 User should view list of events if any event created" time="12.812">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+Then User verifies there is an event list or no registered event found messages.passed
+When User closes driver.....................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Dashboard Module" name="TC04  User should be able navigate edit event when click the edit event button" time="6.32">
         <system-out>
             <![CDATA[Given User does Happy Path Login............................................passed
 And User creates an event...................................................passed
 And User clicks Edit Button.................................................passed
 Then User verifies the url including "edit-event"...........................passed
 When User closes driver.....................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Dashboard Module" name="TC05  User should be able to delete event when click the delete button" time="15.38">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+And User creates an event...................................................passed
+Given User cliks Delete button on the Dashboard Page........................passed
+Then User verifies event numbers deccreased.................................passed
+When User closes driver.....................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Dashboard Module" name="TC06  User should be able to view event participants" time="5.74">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+And User creates an event...................................................passed
+Given User cliks to participant icon........................................passed
+Then User verifies they see the participants list...........................passed
+When User closes driver.....................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Event Module" name="TC01 User should view create event form if click the Create Event" time="3.762">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+When User clicks Create Event Buttom........................................passed
+Then User verifies they see the Event Form..................................passed
+And User closes driver......................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Event Module" name="TC02 User should view validation errors if click the Create Event button" time="4.213">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+When User clicks Create Event Buttom........................................passed
+And User clicks Create New Event Button.....................................passed
+Then User verifies error messages...........................................passed
+And User closes driver......................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Event Module" name="TC03 User should be able to add new participant when click the Add" time="4.43">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+And User clicks Create Event Buttom.........................................passed
+When User clicks Add Participant button.....................................passed
+Then User verifies the participants number increases........................passed
+And User closes driver......................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Event Module" name="TC04 User should view error message if removes all participants" time="3.894">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+And User clicks Create Event Buttom.........................................passed
+When User cliks Delete Participant Button...................................passed
+Then User verifies they see the Please Add Participant text.................passed
+And User closes driver......................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Event Module" name="TC05 User should be able to create new event if fills all required fields" time="5.694">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+And User clicks Create Event Buttom.........................................passed
+When User fills it up the form "eventName" "eventDesc" "eventDate" "firstName" "lastName" "contact".passed
+And User clicks Create New Event Button.....................................passed
+Then Use verifies they see successfull message..............................passed
+And User closes driver......................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Event Module" name="TC06 User should be able to edit event. When user click the edit" time="8.171">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+And User clicks Create Event Buttom.........................................passed
+When User fills it up the form "eventName" "eventDesc" "eventDate" "firstName" "lastName" "contact".passed
+And User clicks Create New Event Button.....................................passed
+When User clicks Edit Button................................................passed
+And User edit it up the all form fields "UpdatedEventName" "UpdatedEventDesc" "UpdatedEventDate" "UpdatedfirstName" "UpdatedlastName" "Updatedcontact".passed
+Then User verifies all form fields are updated..............................passed
+And User closes driver......................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Event Module" name="TC07 User should be able to update event if required fields filled and" time="8.46">
+        <system-out>
+            <![CDATA[Given User does Happy Path Login............................................passed
+And User clicks Create Event Buttom.........................................passed
+When User fills it up the form "eventName" "eventDesc" "eventDate" "firstName" "lastName" "contact".passed
+And User clicks Create New Event Button.....................................passed
+When User clicks Edit Button................................................passed
+And User edit it up the all form fields "UpdatedEventName" "UpdatedEventDesc" "UpdatedEventDate" "UpdatedfirstName" "UpdatedlastName" "Updatedcontact".passed
+And User clicks Update Event Button.........................................passed
+Then User verifies Update Successfull Message...............................passed
+And User verifies they see the updated data.................................passed
+When User clears all cookies................................................passed
+And User closes driver......................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Login Module" name="TC01 User should see login form if not authenticated." time="3.629">
+        <system-out>
+            <![CDATA[Given User goes to "URL"....................................................passed
+Then User verifies they see the Event Manager Login Text....................passed
+And User verifies they see the Username TextBox.............................passed
+And User verifies they see the Password TextBox.............................passed
+And User verifies they see the Login Button.................................passed
+And User closes driver......................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Login Module" name="TC02 – User should see validation errors if click the login button without" time="3.937">
+        <system-out>
+            <![CDATA[Given User goes to "URL"....................................................passed
+Then User verifies they see the Event Manager Login Text....................passed
+And User clicks to Login Button.............................................passed
+Then User verifies they see the Validation Error Messages...................passed
+And User closes driver......................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Login Module" name="TC03 User should navigate to the dashboard and see welcome" time="3.978">
+        <system-out>
+            <![CDATA[Given User goes to "URL"....................................................passed
+Then User verifies they see the Event Manager Login Text....................passed
+When User sends valid "UserName" to username text box.......................passed
+And User sends valid "Password" to password text box........................passed
+And User clicks to Login Button.............................................passed
+Then User verifies they see the welcome message.............................passed
+When User clears all cookies................................................passed
+And User closes driver......................................................passed
 ]]>
         </system-out>
     </testcase>
